@@ -10,8 +10,6 @@ export default class ExShoe extends Component {
   };
   handleAddToCart = (shoe) => {
     let newCart = [...this.state.cart, shoe];
-    // newCart.push(shoe);
-
     this.setState({
       cart: newCart,
     });
@@ -19,7 +17,6 @@ export default class ExShoe extends Component {
   handleDeleteCart = (idShoe) => {
     console.log("🚀 ~ idShoe:", idShoe);
     let { cart } = this.state;
-    // xoá item => splice(index,1) / filter
     let newCart = cart.filter((shoe) => shoe.id !== idShoe);
     this.setState({
       cart: newCart,
